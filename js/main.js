@@ -114,13 +114,13 @@
 // Примітивні типи даних
 const a = 10
 let b = a
-console.log(a)
-console.log(b)
+// console.log(a)
+// console.log(b)
 
 b = 30
 
-console.log(a) // результат: 10
-console.log(b) // результат: 30
+// console.log(a) // результат: 10
+// console.log(b) // результат: 30
 
 // Силочни тип даних
 
@@ -131,10 +131,37 @@ const myInfo = {
     location: 'Lomachynci'
 }
 
-console.log(myInfo)
-const myInfoTrue = myInfo
+// console.log(myInfo)
+// const myInfoTrue = myInfo
 
-console.log(myInfoTrue)
-console.log(myInfo)
+// console.log(myInfoTrue)
+// console.log(myInfo)
 
 // myInfoTrue.location = 'Khm'
+// Пробуєм скопіювати об'єкт щоб при зміннах в новому об'єкті, нічого не змінювались в об'єкті з якого ми взяли ті значення
+
+const myInfoReal = Object.assign({}, myInfo)
+
+myInfoReal.girlfriend = false
+
+// console.log(myInfo)
+// console.log(myInfoReal)
+
+// Так, перши метод працює. Йде до другого у нього синтаксис трохи буде легши та менши писанини
+
+const myInfoFuture = { ...myInfo }
+
+myInfoFuture.work = 'Developer'
+
+// console.log(myInfo)
+// console.log(myInfoFuture)
+
+// Берем треті спосіб з копіюванням що вкладенних об'єктів в об'єкт.
+
+myInfo.weight = {
+    2015: 60,
+    2017: 65,
+    2020: 72,
+}
+
+const myInfoWeight = JSON.parse(JSON.stringify(myInfo))
