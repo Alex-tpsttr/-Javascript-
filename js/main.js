@@ -106,3 +106,35 @@
 
 // console.log(post)
 // console.log(postJson)
+
+
+// Мутації в Javascript 
+
+
+// Примітивні типи даних
+const a = 10
+let b = a
+console.log(a)
+console.log(b)
+
+b = 30
+
+console.log(a) // результат: 10
+console.log(b) // результат: 30
+
+// Силочни тип даних
+
+const myInfo = {
+    age: 20,
+    name: 'Aleks',
+    lastName: 'Frichko',
+    location: 'Lomachynci'
+}
+
+console.log(myInfo)
+const myInfoTrue = myInfo
+
+console.log(myInfoTrue)
+console.log(myInfo)
+
+// myInfoTrue.location = 'Khm'
