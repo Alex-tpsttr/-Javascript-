@@ -112,12 +112,12 @@
 
 
 // Примітивні типи даних
-const a = 10
-let b = a
+// const a = 10
+// let b = a
 // console.log(a)
 // console.log(b)
 
-b = 30
+// b = 30
 
 // console.log(a) // результат: 10
 // console.log(b) // результат: 30
@@ -158,10 +158,49 @@ myInfoFuture.work = 'Developer'
 
 // Берем треті спосіб з копіюванням що вкладенних об'єктів в об'єкт.
 
-myInfo.weight = {
-    2015: 60,
-    2017: 65,
-    2020: 72,
-}
+// myInfo.weight = {
+//     2015: 60,
+//     2017: 65,
+//     2020: 72,
+// }
 
-const myInfoWeight = JSON.parse(JSON.stringify(myInfo))
+// const myInfoWeight = JSON.parse(JSON.stringify(myInfo))
+
+// Функція.
+
+// для чого вона ?
+
+// наприклад маєм таки код 
+
+let a = 5
+let b = 10
+
+
+let c
+
+c = a + b
+console.log(c)
+
+a = 'Саша '
+b = 'Даша'
+
+console.log(c)
+
+// Це все можна записати коротше 
+
+function sum(a, b) {
+    const c = a + b
+    console.log(c)
+}
+console.dir(sum)
+
+sum(a, b)
+
+function myFn(a, b) {
+    let c
+    a = a + 1
+    c = a + b
+    return c
+ }
+
+console.log(myFn(10, 6))
