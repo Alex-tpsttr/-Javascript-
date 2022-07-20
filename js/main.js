@@ -170,37 +170,77 @@ myInfoFuture.work = 'Developer'
 
 // для чого вона ?
 
-// наприклад маєм таки код 
+// наприклад маєм таки код
 
-let a = 5
-let b = 10
+// let a = 5
+// let b = 10
 
 
-let c
+// let c
 
-c = a + b
-console.log(c)
+// c = a + b
+// console.log(c)
 
-a = 'Саша '
-b = 'Даша'
+// a = 'Саша '
+// b = 'Даша'
 
-console.log(c)
+// console.log(c)
 
-// Це все можна записати коротше 
+// Це все можна записати коротше
 
-function sum(a, b) {
-    const c = a + b
-    console.log(c)
+// function sum(a, b) {
+//     const c = a + b
+//     console.log(c)
+// }
+// console.dir(sum)
+
+// sum(a, b)
+
+// function myFn(a, b) {
+//     let c
+//     a = a + 1
+//     c = a + b
+//     return c
+//  }
+
+// console.log(myFn(10, 6))
+
+
+// Зараз вам покажу напростішу функцію в Javascript
+
+// function justFun () {
+
+// }
+
+// justFun() // поверне undefined )))
+
+const userOne = {
+    name: 'Bob',
+    age: 23,
+    country: 'Ukraine',
 }
-console.dir(sum)
 
-sum(a, b)
+function plusAgeForUser(userOne) {
+    userOne.age += 1
+    return userOne
+}
 
-function myFn(a, b) {
-    let c
-    a = a + 1
-    c = a + b
-    return c
- }
+plusAgeForUser(userOne)
+console.log(userOne.age)
 
-console.log(myFn(10, 6))
+
+
+// Проблему з мутацією в об'єкті в такому випадку, покажу нище
+
+
+// const userOne = {
+//     name: 'Bob',
+//     age: 20,
+//     country: 'Ukraine',
+// }
+
+// function plusAgeForUser(user) {
+//     const updateUserOne = Object.assign({}, userOne)
+//     updateUserOne.age += 1
+//     return updateUserOne
+// } 
